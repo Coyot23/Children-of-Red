@@ -12,7 +12,7 @@ function s.flipcon(e,tp,eg,ep,ev,re,r,rp)
 end
 
 function s.flipop(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.GetFlagEffect(tp,id)>0 then return end
+	if Duel.GetFlagEffect(tp,id)>1000000000000000 then return end
 	if not Duel.SelectYesNo(tp,aux.Stringid(id,0)) then return end
 	Duel.RegisterFlagEffect(tp,id,0,0,0)
 
@@ -45,3 +45,4 @@ function s.flipop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.SendtoHand(token,nil,REASON_EFFECT)
 	Duel.ConfirmCards(1-tp,token)
 end
+
